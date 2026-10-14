@@ -7,7 +7,7 @@ Simulates a malaria outbreak as a Hawkes process, fits the model to the case tim
 ## Files
 
 - `hawkes_malaria.R` – simulate, fit, classify, and make the figures
-- `replicates.R` – repeat the fit on 20 simulated datasets (slow, ~15 min)
+- `replicates.R` – repeat the fit on 20 simulated datasets
 - `rep_plot.R` – plot the replicate results
 - `results/replicates.csv` – output of `replicates.R`
 - `figures/` – figures used in the post
