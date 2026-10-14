@@ -1,6 +1,6 @@
 # hawkes-malaria
 
-Code for the blog post [Hawkes processes in epidemiology](https://timj-wood.github.io/posts/hawkes-processes/).
+Code for my blog post [Hawkes processes in epidemiology](https://timj-wood.github.io/posts/hawkes-processes/).
 
 Simulates a malaria outbreak as a Hawkes process, fits the model to the case times, and estimates which cases were imported and which were local. Built on the [epihawkes](https://github.com/mrc-ide/epihawkes) R package from Unwin *et al.* (2021).
 
