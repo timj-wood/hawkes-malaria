@@ -97,13 +97,13 @@ cat(sprintf("\nClassification accuracy at P > 0.5: %.2f\n", mean((bp$p_imported 
 cat(sprintf("Expected number imported: %.1f  (true %d)\n", sum(bp$p_imported), sum(imported)))
 
 # 5. Figures
-# Fig 2: epihawkes' own intensity plot, with the true labels
+# Epihawkes intensity plot, with true data labels
 p2 <- plot_intensity_imported(events = events, imported_events = events[imported], T_max = T_max,
                               kernel = ray_kernel, parameters = true, mu_fn = mu_sinusoidal_constant) +
   labs(x = "day", y = "cases / day") + theme_minimal()
 ggsave("figures/simulated_outbreak.png", p2, width = 10, height = 4, dpi = 150, bg = "white")
 
-# Fig 3: true vs fitted kernel
+# True vs fitted kernel
 u <- seq(0, 120, by = 0.5)
 df3 <- rbind(data.frame(u, phi = ray_kernel(u, true) * (u > delay), which = "true"),
              data.frame(u, phi = ray_kernel(u, fit)  * (u > delay), which = "fitted"))
@@ -111,7 +111,7 @@ p3 <- ggplot(df3, aes(u, phi, linetype = which)) + geom_line() +
   labs(x = "days since a case", y = expression(phi(u)), linetype = NULL) + theme_minimal()
 ggsave("figures/kernel.png", p3, width = 7, height = 3, dpi = 150, bg = "white")
 
-# Fig 4: estimated P(imported), split by truth
+# Estimated P(imported), split by true cases
 df4 <- data.frame(p = bp$p_imported, truth = ifelse(imported, "truly imported", "truly local"))
 p4 <- ggplot(df4, aes(p, fill = truth)) + geom_histogram(bins = 20, alpha = 0.6, position = "identity") +
   labs(x = "estimated P(imported)", y = "number of cases", fill = NULL) + theme_minimal()
