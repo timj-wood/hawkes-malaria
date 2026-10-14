@@ -19,7 +19,7 @@ install.packages(c("remotes", "ggplot2"))
 remotes::install_github("mrc-ide/epihawkes")
 
 source("hawkes_malaria.R")
-source("replicates.R")   # optional
+source("replicates.R")
 source("rep_plot.R")
 ```
 
