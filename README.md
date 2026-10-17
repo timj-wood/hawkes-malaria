@@ -23,8 +23,6 @@ source("replicates.R")
 source("rep_plot.R")
 ```
 
-Run from the repository root.
-
 ## Reference
 
 Unwin *et al.* (2021). Using Hawkes Processes to model imported and local malaria cases in near-elimination settings. *PLoS Comput Biol* 17(4): e1008830. https://doi.org/10.1371/journal.pcbi.1008830
